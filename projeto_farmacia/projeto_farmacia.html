@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto | Farmacia</title>
+    <style>
+        * {
+            text-align: center;
+        }
+        pre {
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    
+    <pre>
+        <code>
+            [REQUERIMENTO]
+
+                Uma farmácia comercializa vários tipos de produtos (remédios, cosméticos, etc.). Além do tipo, para cada produto são
+            registrados o código, designação, composição, fabricante e preço de venda. Quando um cliente compra pela 1o vez um
+            produto são registrados os seus dados (nome, endereço, telefone, código postal, localidade e número de contribuinte).
+            Depois de cadastrado, sempre que um cliente compra um determinado produto é registrado seu código de cliente, os
+            produtos adquiridos, o nome do médico (no caso das receitas médica), bem como o total da venda. Cada compra é
+            identificada por um número para facilitar as consultas à base de dados.
+
+            -----------------------------------------------------------------------------------------------------------------------------
+            [ENTIDADES]
+                - PRODUTO
+                    id_produto
+                    fk_tipo_produto
+                    fk_fabricante
+                    preco_unitario
+ 
+                --------------------------------------- 
+                - TIPO_PRODUTOS
+                    id_tipo_produto
+                    designacao
+                    composicao
+                
+                ---------------------------------------
+                - FABRICANTE 
+                    id_codigo_fabricante
+                    nome
+                    cnpj
+                    endereco
+                    telefone
+                    
+                ---------------------------------------                     
+                - CLIENTE
+                    id_codigo_cliente
+                    nome
+                    cpf
+                    endereco
+                    telefone
+
+                ---------------------------------------
+                - MEDICO    
+                    id_codigo_do_medico
+                    nome 
+                    cfm
+
+                ---------------------------------------
+                - VENDA
+                    id_venda
+                    fk_codigo_cliente
+                    fk_codigo_medico (em caso de receita)
+                    fk_produtos adquiridos
+                    total da venda
+
+            -----------------------------------------------------------------------------------------------------------------------------
+            [RESULTADO]
+        </code>
+    </pre>
+    <img src="resultado_farmacia.png" alt="" srcset="">
+</body>
+</html>
